@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500&family=IBM+Plex+Sans:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Proyecto Podcast</title>
+</head>
+<body>
+    <header class="header header__contenedor">
+        <div class="header__contenedor--imagen">
+            <img src="img/assets/logo.svg" alt="">
+        </div>
+        <div class="header__contenedor--menu">
+            <input class="header__contenedor--input" type="checkbox" id="menu">
+            <label for="menu" class="header__contenedor--label">
+                <div class="header__contenedor--barra"></div>
+            </label>
+            <nav class="header__contenedor--navegacion">
+                <ul>
+                    <li><a href="#episodios">Episodios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#entrevistas">Entrevistas</a></li>
+                    <li><a href="#topicos">Tópicos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>   
+
+    <main class="main main__contenedor">
+        <h1>Hello <span class="linehougth">world</span> pale blue dot<span class="punto">.</span></h1>
+        <p>Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
+        <div class="main__contenedor--boton">Conocé Más</div>
+    </main>
+
+    <article class="main article__contenedor">
+        <h2 id="episodios">Episodios</h2>
+        <div class="article__contenedor--podcast">
+            <div>
+                <iframe src="https://open.spotify.com/embed/episode/7AZZy2nJ4R9ZndHW0h2yxt" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div>
+                <iframe src="https://open.spotify.com/embed/episode/1ezdL2ivAGLwSE6Xbssxqt?theme=0" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div>
+                <iframe src="https://open.spotify.com/embed/episode/3cWta1iiQSfvrdHaCbLkSD?theme=0" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div>
+                <iframe src="https://open.spotify.com/embed/episode/31VyAQAwBiKoHVoYUCEzjQ" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </article>
+
+    <div class="main div__contenedor__venimos">
+        <img src="img/assets/phone.png" alt="">
+        <div class="div__contenedor__venimos--texto">
+            <h2 id="nosotros">De dónde venimos</h2>
+            <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br> <br>
+                Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+        </div>
+    </div>
+
+    <section class="section__contenedor__invitadas">
+        <h2 id="entrevistas">Invitadas/os estelares</h2>
+        <div class="section__contenedor__invitadas--imagenes">
+            <figure>
+                <img src="img/assets/grace-hopper copy.png" alt="">
+            </figure>
+            <figure>
+                <img src="img/assets/Katie-Bouman copy.png" alt="">
+            </figure>
+            <figure>    
+                <img src="img/assets/Margaret_Hamilton.png" alt="">
+            </figure>
+            <figure>
+                <img src="img/assets/An E.R.A.Univac 1103 computer in the 1950s.png" alt="">
+            </figure>
+            <figure>
+                <img src="img/assets/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt="">
+            </figure>
+            <figure>
+                <img src="img/assets/susan-kare.png" alt="">
+            </figure>
+        </div>
+    </section>
+
+    <div class="main div__temas">
+        <h2 id="topicos">Algunos de nuestros temas</h2>
+        <div class="div__temas--iconos">
+            <figure>
+                <img src="img/assets/icon1.svg" alt="">
+                <figcaption>Trabajo remoto</figcaption>
+            </figure>
+            <figure>
+                <img src="img/assets/icon2.svg" alt="">
+                <figcaption>Repensando la programación</figcaption>
+            </figure>
+            <figure>
+                <img src="img/assets/icon3.svg" alt="">
+                <figcaption>Bases del código</figcaption>
+            </figure>
+            <figure>
+                <img src="img/assets/icon4.svg" alt="">
+                <figcaption>Seguridad Informática</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <footer class="footer__contenedor">
+        <section class="footer__contenedor--novedades">
+            <p>¿Querés las últimas novedades?</p>
+            <div class="main__contenedor--boton">Escuchá Los Episodios</div>
+        </section>
+        <div class="header footer__contenedor--iconos">
+            <p>&copy; 2019 - Hello blue pale dot</p>
+            <div class="footer__contenedor--figure">
+                <figure>
+                    <a href="https://open.spotify.com/" target="_blank"><img src="img/assets/spotify.png" alt="spotify"></a>
+                </figure>
+                <figure>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/assets/logotipo-de-instagram.png" alt="instagram"></a>
+                </figure>
+                <figure>
+                    <a href="https://twitter.com/?lang=es" target="_blank"><img src="img/assets/twitter.png" alt="twitter"></a>
+                </figure>
+                <figure>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="img/assets/facebook-circular-logo.png" alt="facebook"></a>
+                </figure>
+                <figure>
+                    <a href="https://web.telegram.org/" target="_blank"><img class="telegram" src="img/assets/telegram.png" alt="telegram"></a>
+                </figure>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

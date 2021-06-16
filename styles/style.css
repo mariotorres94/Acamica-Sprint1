@@ -1,0 +1,579 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --background:#0000EC;
+    --white: #FFFFFF;
+    --black: #060A24;
+    --agua: #00F3BB;
+    --active: rgba(6,10,36,0.56);
+}
+html,body{
+    overflow-x: hidden;
+}
+h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px;  
+    letter-spacing: 0;
+    line-height: 42px;
+}
+.header{
+    padding: 10px 16px 10px 19px;
+}
+.header__contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__contenedor--imagen{
+    width: 24px;
+    height: 24px;
+}
+.header__contenedor--menu{
+    position: relative;
+}
+.header__contenedor--input{
+    display: none;
+}
+.header__contenedor--label{        
+    position: relative;
+    cursor: pointer;
+    height: 10px;
+    width: 18px;
+    display: block;
+}
+.header__contenedor--barra,
+.header__contenedor--barra::before,
+.header__contenedor--barra::after{
+    content: '';
+    width: 18px;
+    height: 2px;
+    background-color: black;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.header__contenedor--barra::before{
+    top: 4px;
+}
+.header__contenedor--barra::after{
+    top: 8px;
+}
+.header__contenedor--navegacion{
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    transition: all 0.5s ease-in-out;
+}
+.header__contenedor--navegacion{
+    width: 100vw;
+}
+.header__contenedor--navegacion li{
+    padding: 14px 217px 14px 19px;
+    background-color: var(--background);
+}
+.header__contenedor--navegacion a{
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--white);
+    letter-spacing: 0;
+    line-height: 28px;
+}
+.header__contenedor--input:checked ~ .header__contenedor--navegacion{
+    transition: all 0.5s ease-in-out;
+    left: calc(-100vw + 34px);
+}
+.header__contenedor--input:checked ~ label > .header__contenedor--barra{
+    transform: translateY(5px) rotate(45deg);
+    transition: all 0.3s ease-in-out;
+}
+.header__contenedor--input:checked ~ label > .header__contenedor--barra::after{
+    transform: translateY(-8px) rotate(90deg);
+    transition: all 0.3s ease-in-out;
+}
+.header__contenedor--input:checked ~ label > .header__contenedor--barra::before{
+    transform: translateY(-13px) rotate(90deg);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+.header__contenedor--navegacion a:active{
+    color: var(--active);
+    text-decoration: line-through;
+}
+.header__contenedor--navegacion a:hover{
+    color: var(--agua);
+    text-decoration: line-through;
+}
+/*Version Mobile*/
+@media (min-width:300px){
+    .header__contenedor--navegacion li{
+        padding: 12px 217px 12px 19px;
+    }
+    .main{ /*Seccion Main*/
+        padding: 29px 16px;
+    }
+    .main__contenedor h1{
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        color: var(--black);
+        letter-spacing: 0;
+        line-height: 42px;
+        margin-bottom: 16px;
+        width: 70%;
+    }
+    .linehougth{
+        text-decoration: line-through;
+    }
+    .punto{
+        color: var(--background);
+    }
+    .main__contenedor p{
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        color: var(--black);
+        letter-spacing: 0px;
+        line-height: 24px;
+        margin-bottom: 36px;
+    }
+    .main__contenedor--boton{
+        background-color: var(--agua);
+        font-size: 16px;
+        padding: 13px 86px;
+        text-align: center;
+        font-family: 'IBM Plex Mono',monospace;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        line-height: 22px;
+        cursor: pointer;
+    }
+    .main__contenedor--boton:hover{
+        background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: var(--white);
+    }
+    .article__contenedor{ /*Seccion Episodios*/
+        clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+        background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 35%);
+        padding: 100px 16px 180px 16px;
+    }
+    .article__contenedor h2{
+        color: var(--white);
+    }
+    .article__contenedor--podcast{
+        margin-top: 21px;
+    }
+    .article__contenedor--podcast div{
+        margin-bottom: 11px;
+    }
+    .div__contenedor__venimos{ /*Seccion Venimos*/
+        position: relative;
+        top: -160px;
+    }
+    .div__contenedor__venimos img{
+        width: 100%;
+    }
+    .div__contenedor__venimos--texto h2{
+        width: 80%;
+    }
+    .div__contenedor__venimos--texto p{
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 22px;
+        color: var(--black);
+        margin-top: 8px;
+    }
+    .section__contenedor__invitadas{ /*Seccion Invitadas*/
+        margin-top: -160px;
+    }
+    .section__contenedor__invitadas h2{
+        width: 89%;
+        padding-left: 16px;
+        padding-top: 25px;
+        margin-bottom: 14px;
+    }
+    .section__contenedor__invitadas--imagenes figure > img{
+        margin-bottom: -4px;
+        width: 100%;
+    }
+    .div__temas h2{ /*Seccion Temas*/
+        margin-top: 19px;
+        margin-bottom: 24px;
+    }
+    .div__temas--iconos{
+        text-align: center;
+    }
+    .div__temas--iconos figure > img{
+        max-width: 100%;
+    }
+    .div__temas--iconos figure > figcaption{
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 24px;
+        color: var(--black);
+        letter-spacing: 0;
+        font-weight: 600;
+        width: 70%;
+        margin: 13px auto 52px;
+    }
+    .div__temas--iconos figure:last-child > figcaption{
+        margin-bottom: 0;
+    }
+    .footer__contenedor{ /*Seccion Footer*/
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__contenedor--novedades{
+        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+        background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 35%);
+        padding: 64px 16px 80px 16px;
+        margin-bottom: 30px;
+        margin-top: 13px;
+    }
+    .footer__contenedor--novedades p{
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 36px;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 42px;
+        width: 80%;
+        margin: 10px auto 0px;
+        color: var(--white);
+    }
+    .footer__contenedor--novedades .main__contenedor--boton{
+        padding: 13px 43px;
+        margin-top: 36px;
+    }
+    .footer__contenedor--iconos{
+        text-align: center;
+        padding: 0px 16px;
+    }
+    .footer__contenedor--iconos p{
+        font-size: 14px;
+        font-family: 'IBM Plex Mono', monospace;
+        letter-spacing: 0;
+        line-height: 22px;
+        color: var(--black);
+    }
+    .footer__contenedor--figure{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 16px 0px 31px 0px;
+        padding: 0px 29px;
+    }
+    .footer__contenedor--iconos figure a img{
+        width: 20px;
+    }
+    .footer__contenedor--iconos figure a > img:hover{
+        filter: invert(75%) sepia(88%) saturate(1807%) hue-rotate(110deg) brightness(96%) contrast(102%);    
+    }
+}
+@media (min-width:900px){
+    .header__contenedor--menu{ /*Seccion Header*/
+        width: 77.3%;
+    }
+    .header__contenedor--label{
+        display: none;
+    }
+    .header__contenedor--navegacion{
+        position: static;
+    }
+    .header__contenedor--navegacion ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+    }
+    .header__contenedor--navegacion li{
+        border: none;
+        margin-right: 48px;
+        padding: 0;
+        background-color: var(--white);
+    }
+    .header__contenedor--navegacion a{
+        font-family: 'IBM Plex Mono',monospace;
+        font-size: 16px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 28px;
+        color: var(--black);
+        background-color: var(--white);
+        padding: 0;
+    }
+    .header__contenedor--navegacion ul li a:hover{
+        color: var(--agua);
+        text-decoration: line-through;
+    }
+    .header__contenedor--navegacion ul li a:active{
+        color: var(--active);
+        text-decoration: line-through;
+    }
+    .main__contenedor h1{ /*Sección Main*/
+        font-size: 41px;
+    }
+    .main__contenedor p{
+        width: 60%;
+    }
+    .main__contenedor--boton{
+        display: inline-block;
+    }
+    .article__contenedor{ /*Seccion Episodios*/
+        padding: 100px 16px 320px 16px;
+    }
+    .div__contenedor__venimos{ /*Seccion Venimos*/
+        position: relative;
+        top: -270px;
+    }
+    .section__contenedor__invitadas{/*Seccion Invitadas*/
+        margin-top: -270px;
+    }
+    .footer__contenedor--novedades{ /*Seccion Footer*/
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .footer__contenedor--iconos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 16px;
+    }
+    .footer__contenedor--figure{
+        padding: 0;
+        margin: 0;
+        width: 200px;
+    }
+    .footer__contenedor--figure figure{
+        margin-right: 25px;
+    }
+    .footer__contenedor--figure figure:last-child{
+        margin-right: 0;
+    }
+}
+/*Version Desktop*/
+@media (min-width:1023px){
+    .header{ /*Seccion Header*/
+        padding: 22px 40px;
+    }
+    .header__contenedor--imagen{
+        width: 40px;
+        height: 40px;
+    }
+    .header__contenedor--imagen img{
+        width: 40px;
+        height: 40px;
+    }
+    .main__contenedor{ /*Seccion Main*/
+        padding: 39px 100px;
+    }
+    .main__contenedor h1{
+        font-size: 42.7px;
+        margin-bottom: 16px;
+        width: 100%;
+        height: 100%;
+    }
+    .main__contenedor p{
+        font-size: 16px;
+        margin-bottom: 56px;
+    }
+    .article__contenedor{ /*Seccion Episodios*/
+        background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        clip-path: polygon(100% 0, 100% 86%, 0 100%, 0 11%);
+        margin: 0;
+        padding: 130px 36px 140px 36px;
+    }
+    .article__contenedor h2{ 
+        padding-left: 64px;
+        font-size: 48px;
+        margin-bottom: 26px;
+    }
+    .article__contenedor--podcast{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px 4px 0px 4px;
+    }
+    .article__contenedor--podcast div{
+        width: 46%;
+        margin-bottom: 50px;
+    }
+    .div__contenedor__venimos{ /*Seccion Venimos*/
+        display: flex;
+        top: -160px;
+        padding-left: 100px;
+    }
+    .div__contenedor__venimos--texto{
+        margin: auto;
+        padding: 40px 0 0 100px;
+    }
+    .div__contenedor__venimos--texto h2{
+        font-size: 48px;
+        width: 90%;
+    }
+    .div__contenedor__venimos--texto p{
+        width: 78%;
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+    .div__contenedor__venimos img{
+        width: 310px;
+    }
+    .section__contenedor__invitadas{ /*Seccion Invitadas*/
+        margin-top: -160px;
+    }
+    .section__contenedor__invitadas h2{
+        padding-left: 100px;
+        margin-bottom: 36px;
+        font-size: 48px;
+    }
+    .section__contenedor__invitadas--imagenes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section__contenedor__invitadas--imagenes figure{
+        width: 33.324%;
+    }
+    .div__temas{ /*Seccion Temas*/
+        padding-bottom: 0;
+    }
+    .div__temas h2{
+        padding-left: 84px;
+        font-size: 48px;
+    }
+    .div__temas--iconos{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 56px 100px 0 100px;
+    }
+    .div__temas--iconos figure figcaption{
+        font-size: 20px;
+    }
+    .div__temas--iconos figure:first-child figcaption,
+    .div__temas--iconos figure:nth-child(3) figcaption{
+        width: 100%;
+        font-size: 20px;
+    }
+    .footer__contenedor--novedades { /*Seccion Footer*/
+        clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+        background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 35%);
+        padding: 160px 16px 120px 16px;
+        margin: auto;
+    }
+    .footer__contenedor--novedades p{
+        font-size: 48px;
+    }
+    .footer__contenedor--iconos p{
+        font-size: 16px;
+    }
+}
+@media (min-width:1200px){
+    .header{ /*Seccion Header*/
+        padding: 22px 60px;
+    }
+    .header__contenedor--menu{
+        width: 75.5%;
+    }
+    .main__contenedor{ /*Seccion Main*/
+        padding: 120px 170px 68px;
+    }
+    .main__contenedor h1{
+        font-size: 50.2px;
+    }
+    .article__contenedor{ /*Seccion Episodios*/
+        background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        clip-path: polygon(100% 0, 100% 86%, 0 100%, 0 11%);
+        margin: 0;
+        padding: 130px 36px 140px 36px;
+    }
+    .article__contenedor h2{
+        padding-left: 164px;
+        font-size: 48px;
+        margin-bottom: 26px;
+    }
+    .article__contenedor--podcast{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px 24px 0px 24px;
+    }
+    .article__contenedor--podcast div{
+        width: 46%;
+        margin-bottom: 50px;
+    }
+    .div__contenedor__venimos{ /*Seccion Venimos*/
+        display: flex;
+        top: -170px;
+        padding-left: 170px;
+    }
+    .div__contenedor__venimos--texto{
+        margin: auto;
+        padding: 40px 0 0 64px;
+    }
+    .div__contenedor__venimos--texto h2{
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+    .div__contenedor__venimos--texto p{
+        width: 78%;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    .div__contenedor__venimos img{
+        width: 350px;
+    }
+    .section__contenedor__invitadas{ /*Seccion Invitadas*/
+        margin-top: -170px;
+    }
+}
+@media (min-width:1400px){
+    .header__contenedor--menu{ /*Seccion Header*/
+        width: 71.6%;
+    }
+    .main__contenedor{ /*Seccion Main*/
+        padding: 120px 200px 68px;
+    }
+    .main__contenedor h1{
+        font-size: 65px;
+        margin-bottom: 25px;
+    }
+    .main__contenedor p{
+        width: 50%;
+    }
+    .div__contenedor__venimos img{ /*Seccion Venimos*/
+        width: 450px;
+    }
+    .div__contenedor__venimos--texto {
+        margin: auto;
+        padding: 40px 0 0 80px;
+    }
+    .section__contenedor__invitadas h2{ /*Seccion Invitadas*/
+        padding-left: 200px;
+    }
+    .div__temas h2{ /*Seccion Temas*/
+        padding-left: 184px;
+    }
+    .div__temas--iconos{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 56px 150px 0 150px;
+    }
+    .footer__contenedor .header{ /*Seccion Footer*/
+        padding: 36px 60px;
+    }
+}
+@media (min-width:1500px){
+    .header__contenedor--menu{ /*Seccion Header*/
+        width: 70.4%;
+    }
+    .main__contenedor h1{ /*Seccion Main*/
+        font-size: 72.5px;
+    }
+}
