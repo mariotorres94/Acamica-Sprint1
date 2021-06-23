@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500&family=IBM+Plex+Sans:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-    <title>Proyecto Podcast</title>
+    <link rel="icon" type="img/svg" href="img/assets/logo.svg">
+    <title>Podcast Channel</title>
 </head>
 <body>
     <header class="header header__contenedor">
@@ -28,12 +29,12 @@
                 </ul>
             </nav>
         </div>
-    </header>   
+    </header> 
 
     <main class="main main__contenedor">
-        <h1>Hello <span class="linehougth">world</span> pale blue dot<span class="punto">.</span></h1>
+        <h1>Hello <s>world</s> pale blue dot<span>.</span></h1>
         <p>Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
-        <div class="main__contenedor--boton">Conocé Más</div>
+        <a href="#nosotros"><div class="main__contenedor--boton">Conocé Más</div></a>
     </main>
 
     <article class="main article__contenedor">
@@ -53,13 +54,13 @@
             </div>
         </div>
     </article>
-
-    <div class="main div__contenedor__venimos">
+    
+    <div id="nosotros" class="main div__contenedor__venimos">
         <img src="img/assets/phone.png" alt="">
         <div class="div__contenedor__venimos--texto">
-            <h2 id="nosotros">De dónde venimos</h2>
-            <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br> <br>
-                Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+            <h2>De dónde venimos</h2>
+            <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.</p>
+            <p>Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
         </div>
     </div>
 
@@ -67,10 +68,10 @@
         <h2 id="entrevistas">Invitadas/os estelares</h2>
         <div class="section__contenedor__invitadas--imagenes">
             <figure>
-                <img src="img/assets/grace-hopper copy.png" alt="">
+                <img src="img/assets/grace-hopper.png" alt="">
             </figure>
             <figure>
-                <img src="img/assets/Katie-Bouman copy.png" alt="">
+                <img src="img/assets/Katie-Bouman.png" alt="">
             </figure>
             <figure>    
                 <img src="img/assets/Margaret_Hamilton.png" alt="">
@@ -87,32 +88,32 @@
         </div>
     </section>
 
-    <div class="main div__temas">
+    <section class="section__temas main">
         <h2 id="topicos">Algunos de nuestros temas</h2>
-        <div class="div__temas--iconos">
-            <figure>
+        <div class="section__temas--iconos">
+            <article>
                 <img src="img/assets/icon1.svg" alt="">
                 <figcaption>Trabajo remoto</figcaption>
-            </figure>
-            <figure>
+            </article>
+            <article>
                 <img src="img/assets/icon2.svg" alt="">
                 <figcaption>Repensando la programación</figcaption>
-            </figure>
-            <figure>
+            </article>
+            <article>
                 <img src="img/assets/icon3.svg" alt="">
                 <figcaption>Bases del código</figcaption>
-            </figure>
-            <figure>
+            </article>
+            <article>
                 <img src="img/assets/icon4.svg" alt="">
                 <figcaption>Seguridad Informática</figcaption>
-            </figure>
+            </article>
         </div>
-    </div>
-
+    </section> 
+    
     <footer class="footer__contenedor">
         <section class="footer__contenedor--novedades">
             <p>¿Querés las últimas novedades?</p>
-            <div class="main__contenedor--boton">Escuchá Los Episodios</div>
+            <a href="#episodios"><div class="main__contenedor--boton">Escuchá Los Episodios</div></a>
         </section>
         <div class="header footer__contenedor--iconos">
             <p>&copy; 2019 - Hello blue pale dot</p>
