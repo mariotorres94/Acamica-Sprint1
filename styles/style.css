@@ -218,18 +218,18 @@ body,html{
 .section__temas--iconos{
     text-align: center;
 }
-.section__temas--iconos article{
+.section__temas--iconos figure{
     margin-top: 24px;
 }
-.section__temas--iconos article:nth-child(2),
-.section__temas--iconos article:nth-child(3),
-.section__temas--iconos article:nth-child(4){
+.section__temas--iconos figure:nth-child(2),
+.section__temas--iconos figure:nth-child(3),
+.section__temas--iconos figure:nth-child(4){
     margin-top: 36px;
 }
-.section__temas--iconos article > img{
+.section__temas--iconos figure > img{
     width: 104px;
 }
-.section__temas--iconos article > figcaption{
+.section__temas--iconos figure > figcaption{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 24px;
     color: var(--black);
@@ -238,7 +238,7 @@ body,html{
     margin: 13px auto 52px;
     width: 288px;
 }
-.section__temas--iconos article:last-child > figcaption{
+.section__temas--iconos figure:last-child > figcaption{
     margin-bottom: 0;
 }
 .footer__contenedor--novedades{
@@ -351,8 +351,6 @@ body,html{
         padding: 120px 16px 110px 16px;
     }
     .article__contenedor--podcast{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         column-gap: 60px;
         row-gap: 30px;
     }
@@ -376,7 +374,9 @@ body,html{
     .div__contenedor__venimos img{
         width: 40%;
     }
-    .section__contenedor__invitadas--imagenes{
+    .section__contenedor__invitadas--imagenes,
+    .section__temas--iconos,
+    .article__contenedor--podcast{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -395,17 +395,13 @@ body,html{
     .section__temas{
         padding-bottom: 0;
     }
-    .section__temas--iconos{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .section__temas--iconos article:first-child,
-    .section__temas--iconos article:nth-child(2),
-    .section__temas--iconos article:nth-child(3),
-    .section__temas--iconos article:last-child{
+    .section__temas--iconos figure:first-child,
+    .section__temas--iconos figure:nth-child(2),
+    .section__temas--iconos figure:nth-child(3),
+    .section__temas--iconos figure:last-child{
         margin-top: 0;
     }
-    .section__temas--iconos article > figcaption{
+    .section__temas--iconos figure > figcaption{
         margin: 29px auto ;
     }
     .footer__contenedor--novedades{
@@ -515,18 +511,15 @@ body,html{
         justify-content: space-evenly;
         margin-left: 13%;
         margin-right: 13%;
-        /*grid-template-columns: repeat(4, 1fr);
-        padding: 0 124px;*/
     }
-    .section__temas--iconos article,
-    .section__temas--iconos article figcaption{
+    .section__temas--iconos figure,
+    .section__temas--iconos figure figcaption{
         width: 230px;
     }
 }
 @media screen and (min-width:1400px){
     .div__contenedor__venimos {
         padding: 64px 200px;
-        /*margin: auto;*/
     }
     .section__temas--iconos{
         margin-left: 15%;
